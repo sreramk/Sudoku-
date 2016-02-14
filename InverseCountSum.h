@@ -1,5 +1,5 @@
  /**
-        File Name: InverseCount.h
+        File Name: InverseCountSum.h
         Su-do-ku solver V1.1
         copyright (c) 2015 K Sreram
         program author: K Sreram
