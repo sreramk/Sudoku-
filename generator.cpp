@@ -7,7 +7,7 @@
 */
 #include <iostream>
 #include "Sudoku.h"
-#include "inverseCountSum.h"
+#include "InverseCountSum.h"
 int Sudoku::NoOfElements(int value)
 {
 
@@ -46,7 +46,7 @@ void Sudoku::GenerateInversePossibilityCount() // this is to be called after the
 }
 
 
-void Sudoku::GenerateWaightValues(InvCount& inv, WaightQueue& Q, int pos_x, int pos_y)
+void Sudoku::GenerateWeightValues(InvCount& inv, WeightQueue& Q, int pos_x, int pos_y)
 {
     GridLimits Lim;
     Lim.SetLimits(pos_x, pos_y);
@@ -54,20 +54,20 @@ void Sudoku::GenerateWaightValues(InvCount& inv, WaightQueue& Q, int pos_x, int 
         inv.Reterive(Col, pos_y - 1) +
         inv.Reterive(Cell, Lim.GridNo - 1)+
                                       10*possibilityCountI[pos_y-1][pos_x-1];
-    TempPUnit.x = pos_x -1; // stored in C string indexing convention
+    TempPUnit.x = pos_x -1;
     TempPUnit.y = pos_y -1;
     Q.push(TempPUnit);
 }
 
-WaightQueue Sudoku::GenerateWaightValues()
+WeightQueue Sudoku::GenerateWeightValues()
 {
-    WaightQueue Q;
+    WeightQueue Q;
     int i,j;
     for(i=1; i<=9; ++i)
         for(j=1; j<=9; ++j)
         {
             if (Grid[i-1][j-1] == 0)
-                GenerateWaightValues(PossibCount, Q, j, i);
+                GenerateWeightValues(PossibCount, Q, j, i);
         }
         return Q;
 } 

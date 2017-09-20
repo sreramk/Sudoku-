@@ -16,7 +16,7 @@ class Solver;
 typedef std::stack <Solver> SudokuStack;
 class Solver
 {
-    WaightQueue Q;
+    WeightQueue Q;
 
 public:
     Sudoku CurPuzzle;

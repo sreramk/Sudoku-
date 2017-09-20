@@ -40,11 +40,11 @@ enum POSSIB
 int possibilityGen(int Value); // a value from 1 to 9
 
 typedef int BoardGrid[9][9];
-typedef int possibilitySet[9][9];
+typedef int PossibilitySet[9][9];
 typedef float InversePossibility[9][9];
 
 #ifdef DEBUG_TESTS
-                    typedef float Waights[9][9];
+                    typedef float Weights[9][9];
 #endif // DEBUG_TESTS
 
 struct PriorityUnit{ /// this is a structure that shows the location of the cell
@@ -67,6 +67,6 @@ struct GridLimits{
 
 
 
-typedef std::priority_queue<PriorityUnit, std::deque<PriorityUnit>, Compare> WaightQueue;
+typedef std::priority_queue<PriorityUnit, std::deque<PriorityUnit>, Compare> WeightQueue;
 
 #endif // BASICDFF_H

@@ -6,7 +6,7 @@
         License: GNU General Public License, version 3 (GPL-3.0)
 */
 #include <iostream>
-#include "inverseCountSum.h"
+#include "InverseCountSum.h"
 
 
 void InvCount::SetValues(InversePossibility& a)

@@ -9,7 +9,7 @@
 #include <iostream>
 #include <ctime>
 #include "Sudoku.h"
-#include "coreSolution.h"
+#include "CoreSolution.h"
 #include <stdlib.h>
 int main()
 {
@@ -67,6 +67,5 @@ int main()
 
     std::cout << "\n\ntime elapsed = " << (double)(end - begin) / CLOCKS_PER_SEC;
     std::cout << "\n Number of iterations :" <<Solver::Count << "\n";
-    system("pause");
     return 0;
 }

@@ -7,7 +7,7 @@
 */
 #ifndef SUDOKU_H
 #define SUDOKU_H
-#include "inverseCountSum.h"
+#include "InverseCountSum.h"
 #include "basicDeff.h"
 class Sudoku
 {
@@ -24,7 +24,7 @@ class Sudoku
 
                     /// only for debug purpose
                 #ifdef DEBUG_TESTS
-                        Waights weight_values; // holds the weights
+                        Weights weight_values; // holds the weights
                 #endif // DEBUG_TESTS
     //BoardGrid possibilityCount;
     public:
@@ -54,8 +54,8 @@ class Sudoku
         void GeneratePossibilityCount();
         void GenerateInversePossibilityCount();
         void SetPossibilityCount();
-        void GenerateWaightValues(InvCount& inv, WaightQueue& Q,  int pos_x, int pos_y);
-        WaightQueue GenerateWaightValues();
+        void GenerateWeightValues(InvCount& inv, WeightQueue& Q,  int pos_x, int pos_y);
+        WeightQueue GenerateWeightValues();
         void reinitializepos();
 
         bool IsSolved();
